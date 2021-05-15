@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  4 14:15:01 2021
+
+@author: MGB
+"""
+
+class Juice:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.capacity = capacity
+
+    def __str__(self):
+        return (self.name + ' ('+str(self.capacity)+'L)')
+
+    def __add__(self, other):
+        new_name = self.name+"&"+other.name
+        new_capacity = self.capacity + other.capacity
+        return Juice(new_name, new_capacity)
+    
+a = Juice('Orange', 1.5)
+b = Juice('Apple', 2.0)
+
+result = a + b
+print(result)

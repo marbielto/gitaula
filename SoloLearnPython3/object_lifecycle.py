@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Mar  1 12:12:20 2021
+
+@author: MGB
+"""
+
+a = 42 # Create object <42>
+b = a # Increase ref. count of <42>
+c = [a] # Increase ref. count of <42>
+
+del a # Decrease ref. count of <42>
+b = 100 # Decrease ref. count of <42>
+c[0] = -1 # Decrease ref. count of <42>
+
